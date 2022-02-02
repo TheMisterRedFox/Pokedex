@@ -6,10 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="./script/pokemons.js"></script>
-    <script src="./script/script.js"></script>
+    <script src="./script/script.js" async></script>
     <title>Pokédex</title>
 </head>
 <body>
     
+    <div id=pokedex>
+        <header>
+            <img src="./assets/images/header.png" alt="pokedex top">
+        </header>
+
+        <section>
+            <div id="screen" class="pokedex-content">
+                <div id="pokemon-card">
+                    <div id="pokemon-picture-container">
+                        <img id="pokemon-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Pokemon">
+                    </div>
+                    <div id="pokemon-info">
+                        <p id="pokemon-id">#001</p>
+                        <h1 id="pokemon-name">Bulbasaur</h1>
+                        <p id="pokemon-height">Height : 2'4"</p>
+                        <p id="pokemon-weight">Weight : 15.2 lbs</p>
+                    </div>
+                </div>
+            </div>
+            <div id="search" class="pokedex-content">
+                <form>
+                    <label for="search-input">Search by number :</label>
+                    <input type="number" name="search-input" id="search-input" placeholder="Search for a Pokemon" min="1" max="151" value="1">
+                    <img src="./assets/images/pokeball.svg" alt="">
+                </form>
+            </div>
+
+        </section>
+
+        <footer>
+            <img src="./assets/images/footer.png" alt=" pokedex bottom">
+        </footer>
+    </div>
 </body>
 </html>

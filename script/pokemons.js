@@ -1,12 +1,29 @@
+const colors = {
+  fire: "#FDDFDF",
+  grass: "#DEFDE0",
+  electric: "#FCF7DE",
+  water: "#DEF3FD",
+  ground: "#f4e7da",
+  rock: "#d5d5d4",
+  fairy: "#fceaff",
+  poison: "#98d7a5",
+  bug: "#f8d5a3",
+  dragon: "#97b3e6",
+  psychic: "#eaeda1",
+  flying: "#F5F5F5",
+  fighting: "#E6E0D4",
+  normal: "#F5F5F5",
+};
+
 const pokemons = [
   {
+    // https://assets.pokemon.com/assets/cms2/img/pokedex/full/ //
     id: 1,
     name: "bulbasaur",
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 7,
     weight: 69,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
   },
   {
     id: 2,
@@ -14,8 +31,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 10,
     weight: 130,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
   },
   {
     id: 3,
@@ -23,8 +39,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 20,
     weight: 1000,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
   },
   {
     id: 4,
@@ -32,8 +47,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 6,
     weight: 85,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
   },
   {
     id: 5,
@@ -41,8 +55,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 11,
     weight: 190,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
   },
   {
     id: 6,
@@ -50,8 +63,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 17,
     weight: 905,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
   },
   {
     id: 7,
@@ -59,8 +71,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 5,
     weight: 90,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
   },
   {
     id: 8,
@@ -68,8 +79,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 10,
     weight: 225,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
   },
   {
     id: 9,
@@ -77,8 +87,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 16,
     weight: 855,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
   },
   {
     id: 10,
@@ -86,8 +95,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 3,
     weight: 29,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png",
   },
   {
     id: 11,
@@ -95,8 +103,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 7,
     weight: 99,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
   },
   {
     id: 12,
@@ -104,8 +111,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 11,
     weight: 320,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
   },
   {
     id: 13,
@@ -113,8 +119,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 3,
     weight: 32,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png",
   },
   {
     id: 14,
@@ -122,8 +127,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 6,
     weight: 100,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png",
   },
   {
     id: 15,
@@ -131,8 +135,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 10,
     weight: 295,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png",
   },
   {
     id: 16,
@@ -140,8 +143,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 3,
     weight: 18,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png",
   },
   {
     id: 17,
@@ -149,8 +151,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 11,
     weight: 300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png",
   },
   {
     id: 18,
@@ -158,8 +159,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 15,
     weight: 395,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png",
   },
   {
     id: 19,
@@ -167,8 +167,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 3,
     weight: 35,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png",
   },
   {
     id: 20,
@@ -176,8 +175,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 7,
     weight: 185,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png",
   },
   {
     id: 21,
@@ -185,8 +183,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 3,
     weight: 20,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png",
   },
   {
     id: 22,
@@ -194,8 +191,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 12,
     weight: 380,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png",
   },
   {
     id: 23,
@@ -203,8 +199,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 20,
     weight: 69,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png",
   },
   {
     id: 24,
@@ -212,8 +207,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 35,
     weight: 650,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png",
   },
   {
     id: 25,
@@ -221,8 +215,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 4,
     weight: 60,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
   },
   {
     id: 26,
@@ -230,8 +223,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 8,
     weight: 300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png",
   },
   {
     id: 27,
@@ -239,8 +231,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 6,
     weight: 120,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png",
   },
   {
     id: 28,
@@ -248,8 +239,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 10,
     weight: 295,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png",
   },
   {
     id: 29,
@@ -257,8 +247,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 4,
     weight: 70,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/029.png",
   },
   {
     id: 30,
@@ -266,8 +255,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 8,
     weight: 200,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png",
   },
   {
     id: 31,
@@ -275,8 +263,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 13,
     weight: 600,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png",
   },
   {
     id: 32,
@@ -284,8 +271,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 5,
     weight: 90,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/032.png",
   },
   {
     id: 33,
@@ -293,8 +279,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 9,
     weight: 195,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/033.png",
   },
   {
     id: 34,
@@ -302,8 +287,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 14,
     weight: 620,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/034.png",
   },
   {
     id: 35,
@@ -311,8 +295,7 @@ const pokemons = [
     type: { name: "fairy", url: "https://pokeapi.co/api/v2/type/18/" },
     height: 6,
     weight: 75,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png",
   },
   {
     id: 36,
@@ -320,8 +303,7 @@ const pokemons = [
     type: { name: "fairy", url: "https://pokeapi.co/api/v2/type/18/" },
     height: 13,
     weight: 400,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/036.png",
   },
   {
     id: 37,
@@ -329,8 +311,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 6,
     weight: 99,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png",
   },
   {
     id: 38,
@@ -338,8 +319,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 11,
     weight: 199,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png",
   },
   {
     id: 39,
@@ -347,8 +327,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 5,
     weight: 55,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png",
   },
   {
     id: 40,
@@ -356,8 +335,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 10,
     weight: 120,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/040.png",
   },
   {
     id: 41,
@@ -365,8 +343,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 8,
     weight: 75,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png",
   },
   {
     id: 42,
@@ -374,8 +351,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 16,
     weight: 550,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png",
   },
   {
     id: 43,
@@ -383,8 +359,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 5,
     weight: 54,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png",
   },
   {
     id: 44,
@@ -392,8 +367,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 8,
     weight: 86,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png",
   },
   {
     id: 45,
@@ -401,8 +375,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 12,
     weight: 186,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/045.png",
   },
   {
     id: 46,
@@ -410,8 +383,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 3,
     weight: 54,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png",
   },
   {
     id: 47,
@@ -419,8 +391,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 10,
     weight: 295,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/047.png",
   },
   {
     id: 48,
@@ -428,8 +399,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 10,
     weight: 300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/048.png",
   },
   {
     id: 49,
@@ -437,8 +407,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 15,
     weight: 125,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/049.png",
   },
   {
     id: 50,
@@ -446,8 +415,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 2,
     weight: 8,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png",
   },
   {
     id: 51,
@@ -455,8 +423,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 7,
     weight: 333,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/051.png",
   },
   {
     id: 52,
@@ -464,8 +431,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 4,
     weight: 42,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png",
   },
   {
     id: 53,
@@ -473,8 +439,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 10,
     weight: 320,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png",
   },
   {
     id: 54,
@@ -482,8 +447,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 8,
     weight: 196,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png",
   },
   {
     id: 55,
@@ -491,8 +455,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 17,
     weight: 766,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/055.png",
   },
   {
     id: 56,
@@ -500,8 +463,7 @@ const pokemons = [
     type: { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
     height: 5,
     weight: 280,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png",
   },
   {
     id: 57,
@@ -509,8 +471,7 @@ const pokemons = [
     type: { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
     height: 10,
     weight: 320,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/057.png",
   },
   {
     id: 58,
@@ -518,8 +479,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 7,
     weight: 190,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png",
   },
   {
     id: 59,
@@ -527,8 +487,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 19,
     weight: 1550,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png",
   },
   {
     id: 60,
@@ -536,8 +495,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 6,
     weight: 124,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png",
   },
   {
     id: 61,
@@ -545,8 +503,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 10,
     weight: 200,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/061.png",
   },
   {
     id: 62,
@@ -554,8 +511,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 13,
     weight: 540,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/062.png",
   },
   {
     id: 63,
@@ -563,8 +519,7 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 9,
     weight: 195,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png",
   },
   {
     id: 64,
@@ -572,8 +527,7 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 13,
     weight: 565,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png",
   },
   {
     id: 65,
@@ -581,8 +535,7 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 15,
     weight: 480,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/065.png",
   },
   {
     id: 66,
@@ -590,8 +543,7 @@ const pokemons = [
     type: { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
     height: 8,
     weight: 195,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
   },
   {
     id: 67,
@@ -599,8 +551,7 @@ const pokemons = [
     type: { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
     height: 15,
     weight: 705,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/067.png",
   },
   {
     id: 68,
@@ -608,8 +559,7 @@ const pokemons = [
     type: { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
     height: 16,
     weight: 1300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/068.png",
   },
   {
     id: 69,
@@ -617,8 +567,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 7,
     weight: 40,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png",
   },
   {
     id: 70,
@@ -626,8 +575,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 10,
     weight: 64,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/070.png",
   },
   {
     id: 71,
@@ -635,8 +583,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 17,
     weight: 155,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/071.png",
   },
   {
     id: 72,
@@ -644,8 +591,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 9,
     weight: 455,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png",
   },
   {
     id: 73,
@@ -653,8 +599,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 16,
     weight: 550,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png",
   },
   {
     id: 74,
@@ -662,8 +607,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 4,
     weight: 200,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png",
   },
   {
     id: 75,
@@ -671,8 +615,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 10,
     weight: 1050,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png",
   },
   {
     id: 76,
@@ -680,8 +623,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 14,
     weight: 3000,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png",
   },
   {
     id: 77,
@@ -689,8 +631,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 10,
     weight: 300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png",
   },
   {
     id: 78,
@@ -698,8 +639,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 17,
     weight: 950,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/078.png",
   },
   {
     id: 79,
@@ -707,8 +647,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 12,
     weight: 360,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png",
   },
   {
     id: 80,
@@ -716,8 +655,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 16,
     weight: 785,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png",
   },
   {
     id: 81,
@@ -725,8 +663,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 3,
     weight: 60,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png",
   },
   {
     id: 82,
@@ -734,8 +671,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 10,
     weight: 600,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/082.png",
   },
   {
     id: 83,
@@ -743,8 +679,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 8,
     weight: 150,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/083.png",
   },
   {
     id: 84,
@@ -752,8 +687,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 14,
     weight: 392,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/084.png",
   },
   {
     id: 85,
@@ -761,8 +695,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 18,
     weight: 852,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/085.png",
   },
   {
     id: 86,
@@ -770,8 +703,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 11,
     weight: 900,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png",
   },
   {
     id: 87,
@@ -779,8 +711,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 17,
     weight: 1200,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/087.png",
   },
   {
     id: 88,
@@ -788,8 +719,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 9,
     weight: 300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/088.png",
   },
   {
     id: 89,
@@ -797,8 +727,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 12,
     weight: 300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/089.png",
   },
   {
     id: 90,
@@ -806,8 +735,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 3,
     weight: 40,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png",
   },
   {
     id: 91,
@@ -815,8 +743,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 15,
     weight: 1325,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/091.png",
   },
   {
     id: 92,
@@ -824,8 +751,7 @@ const pokemons = [
     type: { name: "ghost", url: "https://pokeapi.co/api/v2/type/8/" },
     height: 13,
     weight: 1,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png",
   },
   {
     id: 93,
@@ -833,8 +759,7 @@ const pokemons = [
     type: { name: "ghost", url: "https://pokeapi.co/api/v2/type/8/" },
     height: 16,
     weight: 1,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png",
   },
   {
     id: 94,
@@ -842,8 +767,7 @@ const pokemons = [
     type: { name: "ghost", url: "https://pokeapi.co/api/v2/type/8/" },
     height: 15,
     weight: 405,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png",
   },
   {
     id: 95,
@@ -851,8 +775,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 88,
     weight: 2100,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png",
   },
   {
     id: 96,
@@ -860,8 +783,7 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 10,
     weight: 324,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png",
   },
   {
     id: 97,
@@ -869,8 +791,7 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 16,
     weight: 756,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/097.png",
   },
   {
     id: 98,
@@ -878,8 +799,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 4,
     weight: 65,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/098.png",
   },
   {
     id: 99,
@@ -887,8 +807,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 13,
     weight: 600,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/099.png",
   },
   {
     id: 100,
@@ -896,8 +815,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 5,
     weight: 104,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png",
   },
   {
     id: 101,
@@ -905,8 +823,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 12,
     weight: 666,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/101.png",
   },
   {
     id: 102,
@@ -914,8 +831,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 4,
     weight: 25,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/102.png",
   },
   {
     id: 103,
@@ -923,8 +839,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 20,
     weight: 1200,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/103.png",
   },
   {
     id: 104,
@@ -932,8 +847,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 4,
     weight: 65,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/104.png",
   },
   {
     id: 105,
@@ -941,8 +855,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 10,
     weight: 450,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/105.png",
   },
   {
     id: 106,
@@ -950,8 +863,7 @@ const pokemons = [
     type: { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
     height: 15,
     weight: 498,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png",
   },
   {
     id: 107,
@@ -959,8 +871,7 @@ const pokemons = [
     type: { name: "fighting", url: "https://pokeapi.co/api/v2/type/2/" },
     height: 14,
     weight: 502,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/107.png",
   },
   {
     id: 108,
@@ -968,8 +879,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 12,
     weight: 655,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/108.png",
   },
   {
     id: 109,
@@ -977,8 +887,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 6,
     weight: 10,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/109.png",
   },
   {
     id: 110,
@@ -986,8 +895,7 @@ const pokemons = [
     type: { name: "poison", url: "https://pokeapi.co/api/v2/type/4/" },
     height: 12,
     weight: 95,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/110.png",
   },
   {
     id: 111,
@@ -995,8 +903,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 10,
     weight: 1150,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/111.png",
   },
   {
     id: 112,
@@ -1004,8 +911,7 @@ const pokemons = [
     type: { name: "ground", url: "https://pokeapi.co/api/v2/type/5/" },
     height: 19,
     weight: 1200,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/112.png",
   },
   {
     id: 113,
@@ -1013,8 +919,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 11,
     weight: 346,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png",
   },
   {
     id: 114,
@@ -1022,8 +927,7 @@ const pokemons = [
     type: { name: "grass", url: "https://pokeapi.co/api/v2/type/12/" },
     height: 10,
     weight: 350,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/114.png",
   },
   {
     id: 115,
@@ -1031,8 +935,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 22,
     weight: 800,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/115.png",
   },
   {
     id: 116,
@@ -1040,8 +943,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 4,
     weight: 80,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/116.png",
   },
   {
     id: 117,
@@ -1049,8 +951,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 12,
     weight: 250,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/117.png",
   },
   {
     id: 118,
@@ -1058,8 +959,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 6,
     weight: 150,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/118.png",
   },
   {
     id: 119,
@@ -1067,8 +967,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 13,
     weight: 390,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/119.png",
   },
   {
     id: 120,
@@ -1076,8 +975,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 8,
     weight: 345,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/120.png",
   },
   {
     id: 121,
@@ -1085,8 +983,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 11,
     weight: 800,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/121.png",
   },
   {
     id: 122,
@@ -1094,8 +991,7 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 13,
     weight: 545,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/122.png",
   },
   {
     id: 123,
@@ -1103,8 +999,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 15,
     weight: 560,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/123.png",
   },
   {
     id: 124,
@@ -1112,8 +1007,7 @@ const pokemons = [
     type: { name: "ice", url: "https://pokeapi.co/api/v2/type/15/" },
     height: 14,
     weight: 406,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/124.png",
   },
   {
     id: 125,
@@ -1121,8 +1015,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 11,
     weight: 300,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/125.png",
   },
   {
     id: 126,
@@ -1130,8 +1023,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 13,
     weight: 445,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/126.png",
   },
   {
     id: 127,
@@ -1139,8 +1031,7 @@ const pokemons = [
     type: { name: "bug", url: "https://pokeapi.co/api/v2/type/7/" },
     height: 15,
     weight: 550,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/127.png",
   },
   {
     id: 128,
@@ -1148,8 +1039,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 14,
     weight: 884,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/128.png",
   },
   {
     id: 129,
@@ -1157,8 +1047,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 9,
     weight: 100,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png",
   },
   {
     id: 130,
@@ -1166,8 +1055,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 65,
     weight: 2350,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png",
   },
   {
     id: 131,
@@ -1175,8 +1063,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 25,
     weight: 2200,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/131.png",
   },
   {
     id: 132,
@@ -1184,8 +1071,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 3,
     weight: 40,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png",
   },
   {
     id: 133,
@@ -1193,8 +1079,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 3,
     weight: 65,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png",
   },
   {
     id: 134,
@@ -1202,8 +1087,7 @@ const pokemons = [
     type: { name: "water", url: "https://pokeapi.co/api/v2/type/11/" },
     height: 10,
     weight: 290,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/134.png",
   },
   {
     id: 135,
@@ -1211,8 +1095,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 8,
     weight: 245,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png",
   },
   {
     id: 136,
@@ -1220,8 +1103,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 9,
     weight: 250,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/136.png",
   },
   {
     id: 137,
@@ -1229,8 +1111,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 8,
     weight: 365,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png",
   },
   {
     id: 138,
@@ -1238,8 +1119,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 4,
     weight: 75,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/138.png",
   },
   {
     id: 139,
@@ -1247,8 +1127,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 10,
     weight: 350,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/139.png",
   },
   {
     id: 140,
@@ -1256,8 +1135,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 5,
     weight: 115,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/140.png",
   },
   {
     id: 141,
@@ -1265,8 +1143,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 13,
     weight: 405,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/141.png",
   },
   {
     id: 142,
@@ -1274,8 +1151,7 @@ const pokemons = [
     type: { name: "rock", url: "https://pokeapi.co/api/v2/type/6/" },
     height: 18,
     weight: 590,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/142.png",
   },
   {
     id: 143,
@@ -1283,8 +1159,7 @@ const pokemons = [
     type: { name: "normal", url: "https://pokeapi.co/api/v2/type/1/" },
     height: 21,
     weight: 4600,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
   },
   {
     id: 144,
@@ -1292,8 +1167,7 @@ const pokemons = [
     type: { name: "ice", url: "https://pokeapi.co/api/v2/type/15/" },
     height: 17,
     weight: 554,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png",
   },
   {
     id: 145,
@@ -1301,8 +1175,7 @@ const pokemons = [
     type: { name: "electric", url: "https://pokeapi.co/api/v2/type/13/" },
     height: 16,
     weight: 526,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png",
   },
   {
     id: 146,
@@ -1310,8 +1183,7 @@ const pokemons = [
     type: { name: "fire", url: "https://pokeapi.co/api/v2/type/10/" },
     height: 20,
     weight: 600,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/146.png",
   },
   {
     id: 147,
@@ -1319,8 +1191,7 @@ const pokemons = [
     type: { name: "dragon", url: "https://pokeapi.co/api/v2/type/16/" },
     height: 18,
     weight: 33,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png",
   },
   {
     id: 148,
@@ -1328,8 +1199,7 @@ const pokemons = [
     type: { name: "dragon", url: "https://pokeapi.co/api/v2/type/16/" },
     height: 40,
     weight: 165,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png",
   },
   {
     id: 149,
@@ -1337,8 +1207,7 @@ const pokemons = [
     type: { name: "dragon", url: "https://pokeapi.co/api/v2/type/16/" },
     height: 22,
     weight: 2100,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png",
   },
   {
     id: 150,
@@ -1346,8 +1215,7 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 20,
     weight: 1220,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png",
   },
   {
     id: 151,
@@ -1355,7 +1223,6 @@ const pokemons = [
     type: { name: "psychic", url: "https://pokeapi.co/api/v2/type/14/" },
     height: 4,
     weight: 40,
-    picture:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+    picture: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png",
   },
 ];

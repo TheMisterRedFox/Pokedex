@@ -13,6 +13,7 @@ const colors = {
   flying: "#F5F5F5",
   fighting: "#E6E0D4",
   normal: "#F5F5F5",
+  notfound: "rgba(211, 211, 211, 0.300)",
 };
 
 const pokemons = [

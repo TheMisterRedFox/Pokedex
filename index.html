@@ -31,10 +31,17 @@
                 </div>
             </div>
             <div id="search" class="pokedex-content">
-                <form>
-                    <label for="search-input">Search by number :</label>
-                    <input type="number" name="search-input" id="search-input" min="1" max="151" value="1">
-                    <img src="./assets/images/pokeball.svg" alt="">
+                <form id="nameForm">
+                    <label for="search-input">Search by name :</label>
+                    <input type="text" name="search-input" id="search-input" value="Bulbasaur">
+                    <img src="./assets/images/pokeball.svg" alt="" id="firstPokeball">
+
+                </form>
+                <form id="numberForm">
+                    <label for="search-number">Search by number :</label>
+                    <input type="number" name="search-number" id="search-number" min="1" max="151" value="1">
+                    <img src="./assets/images/pokeball.svg" alt="" id="secondPokeball">
+                    
                 </form>
             </div>
 

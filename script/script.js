@@ -1,7 +1,6 @@
 const searchPokemonById = (id) => {
   for (let i = 0; i < pokemons.length; i++) {
     if (pokemons[i].id === id) {
-      console.log(pokemons[i]);
       return pokemons[i];
     }
   }
@@ -11,7 +10,14 @@ const uppercaseFirstLetter = (pokemonName) => {
   return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
 };
 
-const displayPokmon = (pokemon) => {
+manageInputs = (pokemon) => {
+  const searchedId = document.querySelector("#search-number");
+  searchedId.value = pokemon.id;
+  const searchedName = document.querySelector("#search-input");
+  searchedName.value = uppercaseFirstLetter(pokemon.name);
+};
+
+const displayPokemon = (pokemon) => {
   const pokemonPicture = document.querySelector("#pokemon-img");
   pokemonPicture.src = pokemon.picture;
 
@@ -33,22 +39,58 @@ const displayPokmon = (pokemon) => {
 };
 
 const handleNumberSearch = (event) => {
-  const searchedId = parseInt(document.querySelector("#search-input").value);
+  const searchedId = parseInt(document.querySelector("#search-number").value);
   const pokemon = searchPokemonById(searchedId);
-  displayPokmon(pokemon);
+  displayPokemon(pokemon);
+  manageInputs(pokemon);
 };
 
 const noSubmitProblem = (event) => {
   event.preventDefault();
 };
 
+const searchPokemonByName = (pokemon) => {
+  for (let i = 0; i < pokemons.length; i++) {
+    if (pokemons[i].name === pokemon) {
+      return pokemons[i];
+    }
+  }
+};
+
+const displayNotFound = () => {
+  const pokemonNotFound = {
+    id: "0",
+    name: "?????",
+    type: { name: "notfound" },
+    height: 0,
+    weight: 0,
+    picture: "../assets/images/not-found.png",
+  };
+  displayPokemon(pokemonNotFound);
+  manageInputs(pokemonNotFound);
+};
+
+const handleNameSearch = () => {
+  const searchedName = document
+    .querySelector("#search-input")
+    .value.toLowerCase();
+  const pokemon = searchPokemonByName(searchedName);
+
+  if (pokemon === undefined) {
+    return displayNotFound();
+  }
+
+  displayPokemon(pokemon);
+  manageInputs(pokemon);
+};
+
 const main = () => {
-  const form = document.querySelector("form");
+  const form = document.querySelector("#numberForm");
   form.addEventListener("input", handleNumberSearch);
   form.addEventListener("submit", noSubmitProblem);
 
-  const pokeball = document.querySelector("form img");
-  pokeball.addEventListener("click", handleNumberSearch);
+  const pokeball = document.querySelector("#firstPokeball");
+  pokeball.addEventListener("click", handleNameSearch);
 };
 
 main();

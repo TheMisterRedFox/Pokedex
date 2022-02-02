@@ -8,6 +8,7 @@
 
 body {
   background-color: black;
+  transition: 0.2s;
 }
 
 #pokedex {
@@ -51,6 +52,10 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+#pokemon-info {
+  width: 35%;
 }
 
 #pokemon-picture-container {

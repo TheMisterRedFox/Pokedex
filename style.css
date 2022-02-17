@@ -127,3 +127,7 @@ form img {
   width: 10%;
   cursor: pointer;
 }
+
+#nameAndNumberForm {
+  height: 50px;
+}

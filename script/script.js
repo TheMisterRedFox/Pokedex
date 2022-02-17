@@ -15,6 +15,8 @@ manageInputs = (pokemon) => {
   searchedId.value = pokemon.id;
   const searchedName = document.querySelector("#search-input");
   searchedName.value = uppercaseFirstLetter(pokemon.name);
+  const searched = document.querySelector("#search-all");
+  searched.value = uppercaseFirstLetter(pokemon.name);
 };
 
 const displayPokemon = (pokemon) => {
@@ -84,6 +86,28 @@ const handleNameSearch = () => {
   manageInputs(pokemon);
 };
 
+const handleSearch = () => {
+  let searchedThing = document.querySelector("#search-all").value.toLowerCase();
+  let pokemon;
+
+  if (isNaN(searchedThing) == true) {
+    pokemon = searchPokemonByName(searchedThing);
+
+    if (pokemon === undefined) {
+      return displayNotFound();
+    }
+  } else if (isNaN(searchedThing) === false) {
+    searchedThing = parseInt(
+      document.querySelector("#search-all").value.toLowerCase()
+    );
+    pokemon = searchPokemonById(searchedThing);
+    console.log(pokemon);
+  }
+
+  displayPokemon(pokemon);
+  manageInputs(pokemon);
+};
+
 const main = () => {
   const form = document.querySelector("#numberForm");
   form.addEventListener("input", handleNumberSearch);
@@ -91,6 +115,9 @@ const main = () => {
 
   const pokeball = document.querySelector("#firstPokeball");
   pokeball.addEventListener("click", handleNameSearch);
+
+  const thirdPokeball = document.querySelector("#thirdPokeball");
+  thirdPokeball.addEventListener("click", handleSearch);
 };
 
 main();
